@@ -108,3 +108,18 @@ textarea {
     transform: translateY(-10px);
   }
 }
+
+/* Dashboard */
+.card {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.card img {
+  border-radius: 0;
+}
+.btn
+{
+margin-right: 10px;
+}

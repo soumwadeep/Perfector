@@ -33,7 +33,7 @@ const SignIn = () => {
           user.password
         );
         // console.log(response);
-        navigate("/About");
+        navigate("/Dashboard");
       } else {
         alert("Invalid Credentials");
         setIsSigningIn(false);

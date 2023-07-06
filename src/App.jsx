@@ -8,6 +8,8 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import SignUp from "./components/SignUp";
 import SignIn from "./components/SignIn";
+import Dashboard from "./components/Dashboard";
+import TodoPage from "./components/TodoPage";
 
 const Layout = () => {
   return (
@@ -46,6 +48,17 @@ const router = createBrowserRouter([
       {
         path: "/SignIn",
         element: <SignIn />,
+      },
+    ],
+  },
+  {
+    path: "/Dashboard",
+    element: <Dashboard />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "/Dashboard/Todos/:topicId",
+        element: <TodoPage />,
       },
     ],
   },
