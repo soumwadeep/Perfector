@@ -6,6 +6,7 @@ import ErrorPage from "./ErrorPage";
 import Home from "./components/Home";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import ThankYou from "./components/ThankYou";
 import SignUp from "./components/SignUp";
 import SignIn from "./components/SignIn";
 import Dashboard from "./components/Dashboard";
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
       {
         path: "/SignIn",
         element: <SignIn />,
+      },
+      {
+        path: "/ThankYou",
+        element: <ThankYou />,
       },
     ],
   },

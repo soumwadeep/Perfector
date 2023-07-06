@@ -6,6 +6,9 @@ import codingpic from "../images/code.webp";
 import { databases, account } from "../AppwriteConfig";
 
 const Dashboard = () => {
+  useEffect(() => {
+    document.title = "Dashboard | Perfector";
+  }, []);
   const [topics, setTopics] = useState([]);
   const [newTopic, setNewTopic] = useState("");
   const [editMode, setEditMode] = useState(false);

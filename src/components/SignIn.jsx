@@ -1,9 +1,12 @@
-import { useState } from "react";
-import { useNavigate , NavLink} from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useNavigate, NavLink } from "react-router-dom";
 import { account, databases } from "../AppwriteConfig";
 import signinpic from "../images/login.webp";
 
 const SignIn = () => {
+  useEffect(() => {
+    document.title = "Sign In | Perfector";
+  }, []);
   const [user, setUser] = useState({
     email: "",
     password: "",
@@ -70,6 +73,7 @@ const SignIn = () => {
                     <input
                       type="email"
                       className="form-control"
+                      required
                       onChange={(e) => {
                         setUser({
                           ...user,
@@ -83,6 +87,7 @@ const SignIn = () => {
                     <input
                       type="password"
                       className="form-control"
+                      required
                       onChange={(e) => {
                         setUser({
                           ...user,

@@ -1,10 +1,13 @@
 import signuppic from "../images/signup.webp";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { account, databases } from "../AppwriteConfig";
 import { NavLink } from "react-router-dom";
 
 const SignUp = () => {
+  useEffect(() => {
+    document.title = "Sign Up | Perfector";
+  }, []);
   const [user, setUser] = useState({
     name: "",
     phone: "",
@@ -96,6 +99,7 @@ const SignUp = () => {
                     <input
                       type="text"
                       className="form-control"
+                      required
                       onChange={(e) => {
                         setUser({
                           ...user,
@@ -109,6 +113,7 @@ const SignUp = () => {
                     <input
                       type="number"
                       className="form-control"
+                      required
                       onChange={(e) => {
                         setUser({
                           ...user,
@@ -122,6 +127,7 @@ const SignUp = () => {
                     <input
                       type="email"
                       className="form-control"
+                      required
                       onChange={(e) => {
                         setUser({
                           ...user,
@@ -135,6 +141,7 @@ const SignUp = () => {
                     <input
                       type="password"
                       className="form-control"
+                      required
                       onChange={(e) => {
                         setUser({
                           ...user,

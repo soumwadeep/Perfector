@@ -1,5 +1,9 @@
+import { useEffect } from "react";
 import aboutpic from "../images/about.webp";
 const About = () => {
+  useEffect(() => {
+    document.title = "About Us | Perfector";
+  }, []);
   return (
     <section>
       <div className="row">
