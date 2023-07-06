@@ -1,18 +1,36 @@
-import { NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 import { account } from "../AppwriteConfig";
 const Sidebar = () => {
-    const handleLogout = async () => {
-        try {
-          await account.deleteSession("current");
-        } catch (error) {
-          alert(error);
-          console.log(error);
-        }
-      };
+  const [userDetails, setUserDetails] = useState();
+  const navigate = useNavigate();
+  useEffect(() => {
+    const getData = account.get();
+    getData.then(
+      function (response) {
+        setUserDetails(response);
+      },
+      function (error) {
+        console.log(error);
+        alert(error);
+      }
+    );
+  }, []);
+
+  const handleLogout = async () => {
+    try {
+      await account.deleteSession("current");
+      navigate("/");
+    } catch (error) {
+      alert(error);
+      console.log(error);
+    }
+  };
+
   return (
     <>
       <button
-        className="btn btn-primary"
+        className="btn btn-warning sticky-top mb-3"
         type="button"
         data-bs-toggle="offcanvas"
         data-bs-target="#offcanvasWithBothOptions"
@@ -39,8 +57,21 @@ const Sidebar = () => {
           ></button>
         </div>
         <div className="offcanvas-body">
-          <NavLink to="/">Home</NavLink><br/>
-          <NavLink to="/" onClick={handleLogout}>Sign Out</NavLink>
+          <NavLink
+            className={({ isActive, isPending }) =>
+              isActive ? "nav-link-active" : isPending ? "nav-link" : "nav-link"
+            }
+            to="/"
+          >
+            Home
+          </NavLink>
+          <br />
+          <NavLink
+            className="btn btn-danger text-center"
+            onClick={handleLogout}
+          >
+            Sign Out
+          </NavLink>
         </div>
       </div>
     </>

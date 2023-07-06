@@ -161,18 +161,18 @@ const Dashboard = () => {
                 <div className="inner">
                   <h1>Welcome To Perfector&apos;s Dashboard!</h1>
                   <p>Some Instructions:</p>
-                  <p>Start Creating Your 5 Behaviours Here.</p>
+                  <p>Start Creating Your Favourite Topics Here.</p>
                   <form onSubmit={addTopic}>
                     <div className="mb-3">
                       <input
                         type="text"
                         className="form-control"
-                        placeholder="Enter a topic"
+                        placeholder="Enter A Topic"
                         value={newTopic}
                         onChange={(e) => setNewTopic(e.target.value)}
                       />
                     </div>
-                    <button type="submit" className="btn btn-primary">
+                    <button type="submit" className="btn btn-success">
                       Add Topic
                     </button>
                   </form>
@@ -192,7 +192,6 @@ const Dashboard = () => {
         </div>
         <div className="row">
           <h1 className="text-center mb-3">Your Topics</h1>
-
           {loading ? (
             <p>Loading Your Topics...</p>
           ) : (
@@ -228,7 +227,7 @@ const Dashboard = () => {
                     )}
                     <Link
                       to={`/Dashboard/Todos/${topic.$id}`}
-                      className="btn btn-primary"
+                      className="btn btn-success"
                     >
                       Create Now
                     </Link>
@@ -241,7 +240,7 @@ const Dashboard = () => {
                           Delete
                         </button>
                         <button
-                          className="btn btn-primary"
+                          className="btn btn-warning"
                           onClick={() => startEditMode(topic.$id)}
                         >
                           Edit
