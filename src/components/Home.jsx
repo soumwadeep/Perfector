@@ -7,23 +7,25 @@ const Home = () => {
           <div className="outer">
             <div className="middle">
               <div className="inner">
-                <h1>Welcome To Perfector</h1><br/>
+                <h1>Welcome To Perfector</h1>
+                <br />
                 <p>
-                  Feeling Depressed Because of a Lack of Practice? Want to Excel
-                  in Your Daily Tasks?
+                  Feeling Depressed Due To Lack Of Practice? Want To Excel in
+                  Your Daily Tasks?
                 </p>
                 <p>
-                  Look no further! Perfector is here to help you overcome your
-                  weaknesses and succeed in your favorite subjects. With
-                  Perfector, you can create personalized to-do lists focused on
-                  the areas you want to improve. By breaking down your goals
-                  into manageable daily tasks, you'll be well on your way to
-                  achieving success!
+                  Look No Further! Perfector Is Here To Help You Overcome Your
+                  Weaknesses And Succeed In Your Favorite Subjects. With
+                  Perfector, You Can Create Personalized To-do Lists Focused On
+                  The Areas You Want To Improve. By Breaking Down Your Goals
+                  Into Manageable Daily Tasks, You&apos;ll Be Well On Your Way
+                  To Achieving Success!
                 </p>
                 <p>
-                  Don't let a lack of practice bring you down. With Perfector,
-                  you'll stay motivated and make progress every day. Start using
-                  Perfector today and unlock your full potential!
+                  Don&apos;t Let A Lack Of Practice Bring You Down. With
+                  Perfector, You&apos;ll Stay Motivated And Make Progress Every
+                  Day. Start Using Perfector Today And Unlock Your Full
+                  Potential!
                 </p>
               </div>
             </div>

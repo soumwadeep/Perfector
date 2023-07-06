@@ -5,7 +5,6 @@ import "./index.css";
 import ErrorPage from "./ErrorPage";
 import Home from "./components/Home";
 import About from "./components/About";
-import Features from "./components/Features";
 import Contact from "./components/Contact";
 import SignUp from "./components/SignUp";
 
@@ -34,10 +33,6 @@ const router = createBrowserRouter([
       {
         path: "/About",
         element: <About />,
-      },
-      {
-        path: "/Features",
-        element: <Features />,
       },
       {
         path: "/Contact",

@@ -16,10 +16,21 @@ img {
   width: 100%;
   height: auto;
   border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
 }
 
 p {
   font-weight: 700;
+}
+
+.logo {
+  width: 32px;
+  border-radius: 0;
+  margin-bottom: 10px;
 }
 
 #error-page {

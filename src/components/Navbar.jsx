@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-
+import logo from "../images/icon.webp";
 const root = () => {
   return (
     <>
       <nav className="navbar navbar-expand-lg text-center">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
-            Perfector
+           <img src={logo} alt="logo" className="logo"/> Perfector
           </Link>
           <button
             className="navbar-toggler"
@@ -23,9 +23,6 @@ const root = () => {
             <div className="navbar-nav">
               <Link className="nav-link" to="/About">
                 About Us
-              </Link>
-              <Link className="nav-link" to="/Features">
-                Our Features
               </Link>
               <Link className="nav-link" to="/Contact">
                 Contact Us
