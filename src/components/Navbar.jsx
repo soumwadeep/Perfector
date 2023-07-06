@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const root = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg">
+      <nav className="navbar navbar-expand-lg text-center">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
             Perfector
