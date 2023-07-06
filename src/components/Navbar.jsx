@@ -1,13 +1,13 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "../images/icon.webp";
 const root = () => {
   return (
     <>
       <nav className="navbar navbar-expand-lg text-center">
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/">
-           <img src={logo} alt="logo" className="logo"/> Perfector
-          </Link>
+          <NavLink className="navbar-brand" to="/">
+            <img src={logo} alt="logo" className="logo" /> Perfector
+          </NavLink>
           <button
             className="navbar-toggler"
             type="button"
@@ -21,15 +21,54 @@ const root = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
-              <Link className="nav-link" to="/About">
+              <NavLink
+                className={({ isActive, isPending }) =>
+                  isActive
+                    ? "nav-link-active"
+                    : isPending
+                    ? "nav-link"
+                    : "nav-link"
+                }
+                to="/About"
+              >
                 About Us
-              </Link>
-              <Link className="nav-link" to="/Contact">
+              </NavLink>
+              <NavLink
+                className={({ isActive, isPending }) =>
+                  isActive
+                    ? "nav-link-active"
+                    : isPending
+                    ? "nav-link"
+                    : "nav-link"
+                }
+                to="/Contact"
+              >
                 Contact Us
-              </Link>
-              <Link className="nav-link" to="/SignUp">
+              </NavLink>
+              <NavLink
+                className={({ isActive, isPending }) =>
+                  isActive
+                    ? "nav-link-active"
+                    : isPending
+                    ? "nav-link"
+                    : "nav-link"
+                }
+                to="/SignUp"
+              >
                 Sign Up
-              </Link>
+              </NavLink>
+              <NavLink
+                className={({ isActive, isPending }) =>
+                  isActive
+                    ? "nav-link-active"
+                    : isPending
+                    ? "nav-link"
+                    : "nav-link"
+                }
+                to="/SignIn"
+              >
+                Sign In
+              </NavLink>
             </div>
           </div>
         </div>

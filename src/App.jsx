@@ -7,6 +7,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import SignUp from "./components/SignUp";
+import SignIn from "./components/SignIn";
 
 const Layout = () => {
   return (
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: "/SignUp",
         element: <SignUp />,
+      },
+      {
+        path: "/SignIn",
+        element: <SignIn />,
       },
     ],
   },

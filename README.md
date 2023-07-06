@@ -1,6 +1,6 @@
 # Perfector
 
-Perfector is a powerful and intuitive web application designed to help you excel in your daily tasks and overcome your weaknesses. With Perfector, you can create personalized to-do lists and track your progress, all in one convenient platform. Built using React.js and Appwrite, Perfector offers a seamless user experience and robust functionality. 
+Perfector is a powerful and intuitive web application designed to help you excel in your daily tasks and overcome your weaknesses. With Perfector, you can create personalized to-do lists and track your progress, all in one convenient platform. Built using React.js and Appwrite, Perfector offers a seamless user experience and robust functionality.
 
 ## Features
 
