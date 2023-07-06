@@ -13,7 +13,7 @@ const Contact = () => {
               <div className="inner">
                 <h1>Contact Us</h1>
                 <form
-                  action="https://formsubmit.co/e827bd8fd2a95d7e7576547bb1aad862"
+                  action="https://formsubmit.co/soumwadeep@gmail.com"
                   method="POST"
                 >
                   {/* Email Preferences */}
@@ -55,8 +55,8 @@ const Contact = () => {
                       className="form-control"
                     />
                   </div>
-                  <button type="submit" className="btn btn-primary">
-                    Submit
+                  <button type="submit" className="btn btn-success">
+                    Send
                   </button>
                 </form>
               </div>

@@ -152,7 +152,7 @@ const SignUp = () => {
                   </div>
                   <button
                     type="submit"
-                    className="btn btn-primary"
+                    className="btn btn-warning"
                     onClick={registerUser}
                   >
                     Sign Up
