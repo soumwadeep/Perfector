@@ -13,7 +13,7 @@ const Sidebar = () => {
       },
       function (error) {
         console.log(error);
-        alert(error);
+        navigate("/SignIn");
       }
     );
   }, []);
@@ -47,9 +47,9 @@ const Sidebar = () => {
         aria-labelledby="offcanvasWithBothOptionsLabel"
       >
         <div className="offcanvas-header">
-          <h3 className="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+          <h2 className="offcanvas-title" id="offcanvasWithBothOptionsLabel">
             Perfector
-          </h3>
+          </h2>
           <button
             type="button"
             className="btn-close"
@@ -65,6 +65,15 @@ const Sidebar = () => {
             to="/Dashboard"
           >
             Home
+          </NavLink>
+          <br />
+          <NavLink
+            className={({ isActive, isPending }) =>
+              isActive ? "nav-link-active" : isPending ? "nav-link" : "nav-link"
+            }
+            to="/Profile"
+          >
+            Profile
           </NavLink>
           <br />
           <NavLink

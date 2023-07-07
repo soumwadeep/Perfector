@@ -11,6 +11,7 @@ import SignUp from "./components/SignUp";
 import SignIn from "./components/SignIn";
 import Dashboard from "./components/Dashboard";
 import TodoPage from "./components/TodoPage";
+import Profile from "./components/Profile";
 
 const Layout = () => {
   return (
@@ -64,6 +65,11 @@ const router = createBrowserRouter([
   {
     path: "/Dashboard/Todos/:topicId",
     element: <TodoPage />,
+  },
+  {
+    path: "/Profile",
+    element: <Profile />,
+    errorElement: <ErrorPage />,
   },
 ]);
 const App = () => {
