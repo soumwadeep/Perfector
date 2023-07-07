@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import dashboardpic from "../images/todo.webp";
-import codingpic from "../images/code.webp";
+import codingpic from "../images/quote.webp";
 import { databases, account } from "../AppwriteConfig";
 
 const Dashboard = () => {
@@ -218,7 +218,8 @@ const Dashboard = () => {
                       <>
                         <h5 className="card-title">{topic.topicname}</h5>
                         <p className="card-text">
-                          Start Creating Your {topic.topicname} Practice Todos Now!
+                          Start Creating Your {topic.topicname} Practice Todos
+                          Now!
                         </p>
                       </>
                     ) : (

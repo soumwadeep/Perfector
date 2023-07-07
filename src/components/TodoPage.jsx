@@ -40,9 +40,7 @@ const TodoPage = () => {
     <section>
       <Sidebar />
       <div className="container">
-        <h1 className="text-center mb-3">
-          Create Todos For Topic Number: {topicId}
-        </h1>
+        <h1 className="text-center mb-3">Create Your Todos Here</h1>
         <form action="" onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-sm-8">
