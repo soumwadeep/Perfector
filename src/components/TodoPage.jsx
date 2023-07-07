@@ -23,7 +23,7 @@ const TodoPage = () => {
 
     promise.then(
       function (response) {
-        alert("Added Your Task!");
+        // alert("Added Your Task!");
         console.log(response); // Success
         window.location.reload();
       },
