@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Sidebar from "./Sidebar";
 import Footer from "./Footer";
 import dashboardpic from "../images/todo.webp";
@@ -12,6 +12,7 @@ const Dashboard = () => {
   useEffect(() => {
     document.title = "Dashboard | Perfector";
   }, []);
+  const navigate = useNavigate();
   const [topics, setTopics] = useState([]);
   const [newTopic, setNewTopic] = useState("");
   const [editMode, setEditMode] = useState(false);
@@ -165,6 +166,10 @@ const Dashboard = () => {
     }
   };
 
+  const takeToTodos = (id) => {
+    navigate(`/Dashboard/Todos/${id}`);
+  };
+
   return (
     <section>
       <Sidebar />
@@ -216,7 +221,7 @@ const Dashboard = () => {
           ) : (
             topics.map((topic) => (
               <div className="col-sm-4" key={topic.$id}>
-                <div className="card">
+                <div className="card" onClick={() => takeToTodos(topic.$id)}>
                   <img src={codingpic} className="card-img-top" alt="coding" />
                   <div className="card-body">
                     {!editMode || !editedTopics[topic.$id] ? (
@@ -249,7 +254,7 @@ const Dashboard = () => {
                       to={`/Dashboard/Todos/${topic.$id}`}
                       className="btn btn-success"
                     >
-                      Todos
+                      Create A Todo Now
                     </Link>
                     {!editMode || !editedTopics[topic.$id] ? (
                       <>
@@ -289,7 +294,7 @@ const Dashboard = () => {
           )}
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </section>
   );
 };

@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import homepic from "../images/home.webp";
+import { NavLink } from "react-router-dom";
 const Home = () => {
   useEffect(() => {
     document.title = "Home | Perfector";
@@ -31,6 +32,11 @@ const Home = () => {
                   Day. Start Using Perfector Today And Unlock Your Full
                   Potential!
                 </p>
+                <NavLink to="/SignUp">
+                <button className="btn btn-success btn-lg btngo">
+                  Cick To Register Now! It&apos;s 100% Free!! &rarr;
+                </button>
+                </NavLink>
               </div>
             </div>
           </div>
