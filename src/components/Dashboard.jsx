@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Sidebar from "./Sidebar";
+import Footer from "./Footer";
 import dashboardpic from "../images/todo.webp";
 import codingpic from "../images/quote.webp";
 import { databases, account } from "../AppwriteConfig";
@@ -288,6 +289,7 @@ const Dashboard = () => {
           )}
         </div>
       </div>
+      <Footer/>
     </section>
   );
 };

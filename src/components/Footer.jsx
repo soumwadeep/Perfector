@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <>
-      <h5 className="text-center">Copyright Perfector.All Rights Reserved.</h5>
+      <h5 className="text-center mt-2">Copyright Perfector.All Rights Reserved.</h5>
     </>
   );
 };

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { databases } from "../AppwriteConfig";
+import Footer from "./Footer";
 
 const Todos = () => {
   const { topicId } = useParams();
@@ -140,6 +141,7 @@ const Todos = () => {
           </div>
         )}
       </div>
+      <Footer />
     </section>
   );
 };
