@@ -56,7 +56,59 @@ const SignIn = () => {
           <div className="outer">
             <div className="middle">
               <div className="inner">
-                <img src={signinpic} alt="signin" id="animateimg" />
+                <div className="inner">
+                  <h1>Sign In</h1>
+                  <br />
+                  <form method="post">
+                    <div className="mb-3">
+                      <label className="form-label">Email</label>
+                      <input
+                        type="email"
+                        className="form-control"
+                        required
+                        onChange={(e) => {
+                          setUser({
+                            ...user,
+                            email: e.target.value,
+                          });
+                        }}
+                      />
+                    </div>
+                    <div className="mb-3">
+                      <label className="form-label">Password</label>
+                      <input
+                        type="password"
+                        className="form-control"
+                        required
+                        onChange={(e) => {
+                          setUser({
+                            ...user,
+                            password: e.target.value,
+                          });
+                        }}
+                      />
+                    </div>
+                    <button
+                      type="submit"
+                      className="btn btn-primary"
+                      onClick={loginUser}
+                      disabled={isSigningIn}
+                    >
+                      {isSigningIn ? "Signing In..." : "Sign In"}
+                    </button>
+                    <p className="mt-3">
+                      New User?
+                      <NavLink
+                        to="/SignUp"
+                        style={{ color: "orangered", fontWeight: "900px" }}
+                      >
+                        {" "}
+                        Register Now
+                      </NavLink>
+                      .
+                    </p>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
@@ -65,57 +117,7 @@ const SignIn = () => {
           <div className="outer">
             <div className="middle">
               <div className="inner">
-                <h1>Sign In</h1>
-                <br />
-                <form method="post">
-                  <div className="mb-3">
-                    <label className="form-label">Email</label>
-                    <input
-                      type="email"
-                      className="form-control"
-                      required
-                      onChange={(e) => {
-                        setUser({
-                          ...user,
-                          email: e.target.value,
-                        });
-                      }}
-                    />
-                  </div>
-                  <div className="mb-3">
-                    <label className="form-label">Password</label>
-                    <input
-                      type="password"
-                      className="form-control"
-                      required
-                      onChange={(e) => {
-                        setUser({
-                          ...user,
-                          password: e.target.value,
-                        });
-                      }}
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    className="btn btn-primary"
-                    onClick={loginUser}
-                    disabled={isSigningIn}
-                  >
-                    {isSigningIn ? "Signing In..." : "Sign In"}
-                  </button>
-                  <p className="mt-3">
-                    New User?
-                    <NavLink
-                      to="/SignUp"
-                      style={{ color: "orangered", fontWeight: "900px" }}
-                    >
-                      {" "}
-                      Register Now
-                    </NavLink>
-                    .
-                  </p>
-                </form>
+                <img src={signinpic} alt="login" id="animateimg" />
               </div>
             </div>
           </div>

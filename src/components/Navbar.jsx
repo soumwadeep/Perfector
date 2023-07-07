@@ -81,20 +81,6 @@ const Navbar = () => {
                     className={(navData) =>
                       navData.isActive ? "nav-link-active" : "nav-link"
                     }
-                    to="/SignIn"
-                    onClick={() => {
-                      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-                      toggleNav();
-                    }}
-                  >
-                    Sign In
-                  </NavLink>
-                </li>
-                <li className="nav-item">
-                  <NavLink
-                    className={(navData) =>
-                      navData.isActive ? "nav-link-active" : "nav-link"
-                    }
                     to="/SignUp"
                     onClick={() => {
                       window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -102,6 +88,20 @@ const Navbar = () => {
                     }}
                   >
                     Sign Up
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink
+                    className={(navData) =>
+                      navData.isActive ? "nav-link-active" : "nav-link"
+                    }
+                    to="/SignIn"
+                    onClick={() => {
+                      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+                      toggleNav();
+                    }}
+                  >
+                    Sign In
                   </NavLink>
                 </li>
               </ul>

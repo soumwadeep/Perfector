@@ -33,9 +33,9 @@ const Home = () => {
                   Potential!
                 </p>
                 <NavLink to="/SignUp">
-                <button className="btn btn-success btn-lg btngo">
-                  Cick To Register Now! It&apos;s 100% Free!! &rarr;
-                </button>
+                  <button className="btn btn-success btn-lg btngo mt-3">
+                    Cick Here To Register
+                  </button>
                 </NavLink>
               </div>
             </div>
