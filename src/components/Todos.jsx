@@ -84,55 +84,59 @@ const Todos = () => {
           <p>Loading...</p>
         ) : (
           <div className="item-container">
-            {todos.map((item) => (
-              <div className="row mb-3 task-box" key={item.$id}>
-                <div className="col-sm-8">
-                  {editTodoId === item.$id ? (
-                    <input
-                      type="text"
-                      className="form-control"
-                      value={editTodoValue}
-                      onChange={(e) => setEditTodoValue(e.target.value)}
-                    />
-                  ) : (
-                    <h4>{item.todoitem}</h4>
-                  )}
+            {todos.length === 0 ? (
+              <p>You Haven&apos;t Created Any Tasks Yet.Create One To Excel!</p>
+            ) : (
+              todos.map((item) => (
+                <div className="row mb-3 task-box" key={item.$id}>
+                  <div className="col-sm-8">
+                    {editTodoId === item.$id ? (
+                      <input
+                        type="text"
+                        className="form-control"
+                        value={editTodoValue}
+                        onChange={(e) => setEditTodoValue(e.target.value)}
+                      />
+                    ) : (
+                      <h4>{item.todoitem}</h4>
+                    )}
+                  </div>
+                  <div className="col-sm">
+                    {editTodoId === item.$id ? (
+                      <>
+                        <button
+                          className="btn btn-success"
+                          onClick={() => updateTodo(item.$id, editTodoValue)}
+                        >
+                          Save
+                        </button>
+                        <button
+                          className="btn btn-secondary"
+                          onClick={cancelEdit}
+                        >
+                          Cancel
+                        </button>
+                      </>
+                    ) : (
+                      <>
+                        <button
+                          className="btn btn-primary"
+                          onClick={() => editTodo(item.$id)}
+                        >
+                          Edit
+                        </button>
+                        <button
+                          className="btn btn-danger"
+                          onClick={() => deleteTodo(item.$id)}
+                        >
+                          Delete
+                        </button>
+                      </>
+                    )}
+                  </div>
                 </div>
-                <div className="col-sm">
-                  {editTodoId === item.$id ? (
-                    <>
-                      <button
-                        className="btn btn-success"
-                        onClick={() => updateTodo(item.$id, editTodoValue)}
-                      >
-                        Save
-                      </button>
-                      <button
-                        className="btn btn-secondary"
-                        onClick={cancelEdit}
-                      >
-                        Cancel
-                      </button>
-                    </>
-                  ) : (
-                    <>
-                      <button
-                        className="btn btn-primary"
-                        onClick={() => editTodo(item.$id)}
-                      >
-                        Edit
-                      </button>
-                      <button
-                        className="btn btn-danger"
-                        onClick={() => deleteTodo(item.$id)}
-                      >
-                        Delete
-                      </button>
-                    </>
-                  )}
-                </div>
-              </div>
-            ))}
+              ))
+            )}
           </div>
         )}
       </div>

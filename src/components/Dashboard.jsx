@@ -208,6 +208,10 @@ const Dashboard = () => {
           <h1 className="text-center mb-3">Your Topics</h1>
           {loading ? (
             <p>Loading Your Topics...</p>
+          ) : topics.length === 0 ? (
+            <p>
+              You Haven&apos;t Created Any Topics Yet.Create One To Excel In It!
+            </p>
           ) : (
             topics.map((topic) => (
               <div className="col-sm-4" key={topic.$id}>
