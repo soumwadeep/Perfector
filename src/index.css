@@ -134,6 +134,12 @@ textarea {
   margin-bottom: 10px;
 }
 
+.backbtn {
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
 .task-box {
   background-color: wheat;
   border-radius: 10px;

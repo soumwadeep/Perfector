@@ -32,7 +32,7 @@ const Sidebar = () => {
   return (
     <>
       <button
-        className="btn btn-warning sticky-top mb-3"
+        className="btn btn-warning sticky-top mb-3 ms-2"
         type="button"
         data-bs-toggle="offcanvas"
         data-bs-target="#offcanvasWithBothOptions"
@@ -40,6 +40,11 @@ const Sidebar = () => {
       >
         <i className="fa-solid fa-bars"></i> &nbsp;Menu
       </button>
+      <NavLink to="/Dashboard">
+        <button className="btn btn-danger sticky-top mb-3 backbtn">
+          &#8678; Go Back
+        </button>
+      </NavLink>
       <div
         className="offcanvas offcanvas-start"
         data-bs-scroll="true"
