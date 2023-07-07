@@ -47,6 +47,11 @@ textarea {
   height: 100vh;
 }
 
+.navbar,
+.offcanvas {
+  background: rgb(244, 248, 238);
+}
+
 .nav-link {
   cursor: pointer !important;
 }
