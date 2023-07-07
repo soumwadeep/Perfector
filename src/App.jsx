@@ -60,12 +60,10 @@ const router = createBrowserRouter([
     path: "/Dashboard",
     element: <Dashboard />,
     errorElement: <ErrorPage />,
-    children: [
-      {
-        path: "/Dashboard/Todos/:topicId",
-        element: <TodoPage />,
-      },
-    ],
+  },
+  {
+    path: "/Dashboard/Todos/:topicId",
+    element: <TodoPage />,
   },
 ]);
 const App = () => {
