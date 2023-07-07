@@ -19,6 +19,11 @@ To get started with Perfector, follow these steps:
 3. Start the development server: `yarn dev`
 4. Access Perfector in your browser at `http://localhost:3000`
 
+## Test Login Details
+
+Email: testuser@test.com
+Password: 12345678
+
 ## Contributing
 
 We welcome contributions from the community to help improve Perfector. To contribute, please follow these guidelines:
