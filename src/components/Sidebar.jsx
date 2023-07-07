@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { account } from "../AppwriteConfig";
+import logo from "../images/icon.webp";
 const Sidebar = () => {
   const [userDetails, setUserDetails] = useState();
   const navigate = useNavigate();
@@ -54,7 +55,7 @@ const Sidebar = () => {
       >
         <div className="offcanvas-header">
           <h2 className="offcanvas-title" id="offcanvasWithBothOptionsLabel">
-            Perfector
+            <img src={logo} alt="logo" className="logo"/> Perfector
           </h2>
           <button
             type="button"
