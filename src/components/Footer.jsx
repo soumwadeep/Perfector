@@ -1,7 +1,13 @@
+import { NavLink } from "react-router-dom";
+
 const Footer = () => {
   return (
     <>
-      <h5 className="text-center mt-2">Copyright Perfector.All Rights Reserved.</h5>
+      <NavLink to="/" style={{color:"black"}}>
+        <h5 className="text-center mt-2">
+          Copyright Perfector.All Rights Reserved.
+        </h5>
+      </NavLink>
     </>
   );
 };
