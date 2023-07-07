@@ -19,6 +19,18 @@ To get started with Perfector, follow these steps:
 3. Start the development server: `yarn dev`
 4. Access Perfector in your browser at `http://localhost:3000`
 
+## Screenshots
+![image](https://github.com/soumwadeep/Perfector/assets/69720515/c44999db-4750-47b1-a3c1-64d939c8c289)
+
+![image](https://github.com/soumwadeep/Perfector/assets/69720515/5ff400bd-439d-4434-9189-eada67deddca)
+
+![image](https://github.com/soumwadeep/Perfector/assets/69720515/08d73c71-096c-43e5-9f40-b167e1d3bde0)
+
+![image](https://github.com/soumwadeep/Perfector/assets/69720515/452dca09-d6c3-4cf3-a13c-9d94ce7f39c1)
+
+![image](https://github.com/soumwadeep/Perfector/assets/69720515/c01ff4b8-3896-4ac1-b11b-70458f383977)
+
+
 ## Test Login Details
 
 Email: testuser@test.com
