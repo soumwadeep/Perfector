@@ -1,5 +1,9 @@
+import { useEffect } from "react";
 import homepic from "../images/home.webp";
 const Home = () => {
+  useEffect(() => {
+    document.title = "Home | Perfector";
+  }, []);
   return (
     <section>
       <div className="row">
