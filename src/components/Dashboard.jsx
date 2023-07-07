@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable no-unused-vars */
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Sidebar from "./Sidebar";
@@ -36,16 +38,25 @@ const Dashboard = () => {
         "64a655223c7d1fc593e5",
         "64a6a131555f02ccdadd"
       );
-      // const filteredTopics = response.documents.filter(
-      //   (topic) => topic.userid === presentUser
-      // );
-      // setFilteredTopics(filteredTopics);
-      setTopics(response.documents);
+      const filteredTopics = response.documents.filter(
+        (topic) => topic.userid === presentUser
+      );
+      setTopics(filteredTopics);
       setLoading(false);
     } catch (error) {
       console.error(error);
     }
   };
+
+  useEffect(() => {
+    fetchPresentUser();
+  }, []);
+
+  useEffect(() => {
+    if (presentUser) {
+      fetchTopics();
+    }
+  }, [presentUser]);
 
   const addTopic = async (e) => {
     e.preventDefault();
@@ -207,14 +218,14 @@ const Dashboard = () => {
                       <>
                         <h5 className="card-title">{topic.topicname}</h5>
                         <p className="card-text">
-                          Start Creating Your {topic.topicname} Practice Todos!
+                          Start Creating Your {topic.topicname} Practice Todos Now!
                         </p>
                       </>
                     ) : (
                       <>
                         <input
                           type="text"
-                          className="form-control"
+                          className="form-control mb-3"
                           value={editedTopics[topic.$id].topicname}
                           onChange={(e) =>
                             setEditedTopics((prevEditedTopics) => ({
@@ -232,7 +243,7 @@ const Dashboard = () => {
                       to={`/Dashboard/Todos/${topic.$id}`}
                       className="btn btn-success"
                     >
-                      Create Now
+                      Todos
                     </Link>
                     {!editMode || !editedTopics[topic.$id] ? (
                       <>
@@ -258,7 +269,7 @@ const Dashboard = () => {
                           Cancel
                         </button>
                         <button
-                          className="btn btn-success"
+                          className="btn btn-warning"
                           onClick={(e) => saveEditedTopic(e, topic.$id)}
                         >
                           Save

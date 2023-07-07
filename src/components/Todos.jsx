@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { databases } from "../AppwriteConfig";
 
 const Todos = () => {
-  const [todos, setTodos] = useState("");
+  const { topicId } = useParams();
+  const [todos, setTodos] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [todoId, setTodoId] = useState("");
   const [editTodoId, setEditTodoId] = useState("");
   const [editTodoValue, setEditTodoValue] = useState("");
 
@@ -16,15 +17,17 @@ const Todos = () => {
     );
     getTodos.then(
       function (response) {
-        setTodos(response.documents);
-        setTodoId(response.documents.$id);
+        const filteredTodos = response.documents.filter(
+          (item) => item.topicId === topicId
+        );
+        setTodos(filteredTodos);
       },
       function (error) {
         console.log(error); // Failure
       }
     );
     setLoading(false);
-  }, []);
+  }, [topicId]);
 
   const deleteTodo = (id) => {
     const deleteATodo = databases.deleteDocument(
@@ -49,6 +52,11 @@ const Todos = () => {
     setEditTodoValue(todoItem.todoitem);
   };
 
+  const cancelEdit = () => {
+    setEditTodoId("");
+    setEditTodoValue("");
+  };
+
   const updateTodo = (id, todoitem) => {
     const updateTodoText = databases.updateDocument(
       "64a655223c7d1fc593e5",
@@ -59,8 +67,7 @@ const Todos = () => {
     updateTodoText.then(
       function (response) {
         console.log(response); // Success
-        setEditTodoId("");
-        setEditTodoValue("");
+        cancelEdit();
         window.location.reload();
       },
       function (error) {
@@ -77,47 +84,55 @@ const Todos = () => {
           <p>Loading...</p>
         ) : (
           <div className="item-container">
-            {todos &&
-              todos.map((item) => (
-                <div className="row mb-3 task-box" key={item.$id}>
-                  <div className="col-sm-8">
-                    {editTodoId === item.$id ? (
-                      <input
-                        type="text"
-                        value={editTodoValue}
-                        onChange={(e) => setEditTodoValue(e.target.value)}
-                      />
-                    ) : (
-                      <h4>{item.todoitem}</h4>
-                    )}
-                  </div>
-                  <div className="col-sm">
-                    {editTodoId === item.$id ? (
+            {todos.map((item) => (
+              <div className="row mb-3 task-box" key={item.$id}>
+                <div className="col-sm-8">
+                  {editTodoId === item.$id ? (
+                    <input
+                      type="text"
+                      className="form-control"
+                      value={editTodoValue}
+                      onChange={(e) => setEditTodoValue(e.target.value)}
+                    />
+                  ) : (
+                    <h4>{item.todoitem}</h4>
+                  )}
+                </div>
+                <div className="col-sm">
+                  {editTodoId === item.$id ? (
+                    <>
                       <button
                         className="btn btn-success"
                         onClick={() => updateTodo(item.$id, editTodoValue)}
                       >
                         Save
                       </button>
-                    ) : (
+                      <button
+                        className="btn btn-secondary"
+                        onClick={cancelEdit}
+                      >
+                        Cancel
+                      </button>
+                    </>
+                  ) : (
+                    <>
                       <button
                         className="btn btn-primary"
                         onClick={() => editTodo(item.$id)}
                       >
                         Edit
                       </button>
-                    )}
-                    <button
-                      className="btn btn-danger"
-                      onClick={() => {
-                        deleteTodo(item.$id);
-                      }}
-                    >
-                      Delete
-                    </button>
-                  </div>
+                      <button
+                        className="btn btn-danger"
+                        onClick={() => deleteTodo(item.$id)}
+                      >
+                        Delete
+                      </button>
+                    </>
+                  )}
                 </div>
-              ))}
+              </div>
+            ))}
           </div>
         )}
       </div>

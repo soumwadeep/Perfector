@@ -1,10 +1,13 @@
 import { useParams } from "react-router-dom";
 import Sidebar from "./Sidebar";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { databases } from "../AppwriteConfig";
 import Todos from "./Todos";
 
 const TodoPage = () => {
+  useEffect(() => {
+    document.title = "Todos | Perfector";
+  }, []);
   const { topicId } = useParams();
   const [todo, setTodo] = useState("");
   const docId = Date.now().toString();
