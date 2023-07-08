@@ -82,7 +82,9 @@ const Todos = () => {
       <div className="container">
         <h2 className="text-center">Your Tasks</h2>
         {loading ? (
-          <p>Loading...</p>
+          <div className="spinner-border text-success" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
         ) : (
           <div className="item-container">
             {todos.length === 0 ? (

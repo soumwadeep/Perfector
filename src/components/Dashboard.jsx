@@ -213,7 +213,9 @@ const Dashboard = () => {
         <div className="row">
           <h1 className="text-center mb-3">Your Topics</h1>
           {loading ? (
-            <p>Loading Your Topics...</p>
+            <div className="spinner-border text-success" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
           ) : topics.length === 0 ? (
             <p>
               You Haven&apos;t Created Any Topics Yet.Create One To Excel In It!
