@@ -271,7 +271,7 @@ const Dashboard = () => {
                           className="btn btn-warning"
                           onClick={() => startEditMode(topic.$id)}
                         >
-                          Edit
+                          Edit Title
                         </button>
                       </>
                     ) : (
@@ -286,7 +286,7 @@ const Dashboard = () => {
                           className="btn btn-warning"
                           onClick={(e) => saveEditedTopic(e, topic.$id)}
                         >
-                          Save
+                          Update
                         </button>
                       </>
                     )}
