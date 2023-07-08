@@ -214,8 +214,8 @@ const Dashboard = () => {
           <h1 className="text-center mb-3">Your Topics</h1>
           {loading ? (
             <div className="spinner-border text-success" role="status">
-            <span className="visually-hidden">Loading...</span>
-          </div>
+              <span className="visually-hidden">Loading...</span>
+            </div>
           ) : topics.length === 0 ? (
             <p>
               You Haven&apos;t Created Any Topics Yet.Create One To Excel In It!
@@ -223,7 +223,8 @@ const Dashboard = () => {
           ) : (
             topics.map((topic) => (
               <div className="col-sm-4" key={topic.$id}>
-                <div className="card" onClick={() => takeToTodos(topic.$id)}>
+                {/* onClick={() => takeToTodos(topic.$id)} */}
+                <div className="card">
                   <img src={codingpic} className="card-img-top" alt="coding" />
                   <div className="card-body">
                     {!editMode || !editedTopics[topic.$id] ? (
