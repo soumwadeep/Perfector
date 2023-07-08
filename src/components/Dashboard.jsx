@@ -225,7 +225,7 @@ const Dashboard = () => {
               <div className="col-sm-4" key={topic.$id}>
                 {/* onClick={() => takeToTodos(topic.$id)} */}
                 <div className="card">
-                  <img src={codingpic} className="card-img-top" alt="coding" />
+                  <img src={codingpic} className="card-img-top" alt="coding" onClick={() => takeToTodos(topic.$id)}/>
                   <div className="card-body">
                     {!editMode || !editedTopics[topic.$id] ? (
                       <>
