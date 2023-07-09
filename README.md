@@ -2,7 +2,7 @@
 
 Perfector is a powerful and intuitive web application designed to help you excel in your daily tasks and overcome your weaknesses. With Perfector, you can create personalized to-do lists and track your progress, all in one convenient platform. Built using React.js and Appwrite, Perfector offers a seamless user experience and robust functionality.
 
-## Features
+# Features
 
 - **Personalized To-Do Lists**: Add your favorite topics and create daily tasks to focus on improving your skills and overcoming weaknesses.
 - **Track Your Progress**: Stay motivated by tracking your progress and marking tasks as completed.
@@ -10,7 +10,7 @@ Perfector is a powerful and intuitive web application designed to help you excel
 - **Powerful Technologies**: Perfector is built using React.js, a popular JavaScript library for building user interfaces, and Appwrite, an open-source backend server for web and mobile applications.
 - **Continuous Improvement**: Our team is dedicated to continuously enhancing Perfector to provide an exceptional user experience and address user feedback.
 
-## Getting Started
+# Getting Started
 
 To get started with Perfector, follow these steps:
 
@@ -19,21 +19,21 @@ To get started with Perfector, follow these steps:
 3. Start the development server: `yarn dev`
 4. Access Perfector in your browser at `http://localhost:3000`
 
-## Screenshots
+# Screenshots
 
-# Home Page
+## Home Page
 ![image](https://github.com/soumwadeep/Perfector/assets/69720515/b3536eca-0867-4079-98ae-3f8b28dc6f48)
 
-# About Page
+## About Page
 ![image](https://github.com/soumwadeep/Perfector/assets/69720515/f4ad0aaa-117e-4871-9e82-64cd1b7d2b5c)
 
-# Contact Page
+## Contact Page
 ![image](https://github.com/soumwadeep/Perfector/assets/69720515/5905e4c2-11ba-43d1-9860-7b3e65426d10)
 
-# Sign Up Page
+## Sign Up Page
 ![image](https://github.com/soumwadeep/Perfector/assets/69720515/8ab682fa-d548-451c-8dc0-28a996c2f8be)
 
-# Sign In Page
+## Sign In Page
 ![image](https://github.com/soumwadeep/Perfector/assets/69720515/dd851e2c-d4ee-41f9-af82-54ed44e234aa)
 
 # Dashboard Page
@@ -46,12 +46,12 @@ To get started with Perfector, follow these steps:
 ![image](https://github.com/soumwadeep/Perfector/assets/69720515/d53e04ba-c540-485c-be1d-30efa744f509)
 
 
-## Test Login Details
+# Test Login Details
 
 Email: testuser@test.com
 Password: 12345678
 
-## Contributing
+# Contributing
 
 We welcome contributions from the community to help improve Perfector. To contribute, please follow these guidelines:
 
@@ -60,7 +60,7 @@ We welcome contributions from the community to help improve Perfector. To contri
 3. Commit your changes with clear and descriptive messages.
 4. Create a pull request, explaining the changes and their purpose.
 
-## Feedback and Support
+# Feedback and Support
 
 We value your feedback and are here to assist you. If you have any questions, suggestions, or issues, please reach out to our team by [creating an issue](https://github.com/soumwadeep/perfector/issues).
 
