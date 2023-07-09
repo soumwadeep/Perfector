@@ -20,15 +20,30 @@ To get started with Perfector, follow these steps:
 4. Access Perfector in your browser at `http://localhost:3000`
 
 ## Screenshots
-![image](https://github.com/soumwadeep/Perfector/assets/69720515/c44999db-4750-47b1-a3c1-64d939c8c289)
 
-![image](https://github.com/soumwadeep/Perfector/assets/69720515/5ff400bd-439d-4434-9189-eada67deddca)
+# Home Page
+![image](https://github.com/soumwadeep/Perfector/assets/69720515/b3536eca-0867-4079-98ae-3f8b28dc6f48)
 
-![image](https://github.com/soumwadeep/Perfector/assets/69720515/08d73c71-096c-43e5-9f40-b167e1d3bde0)
+# About Page
+![image](https://github.com/soumwadeep/Perfector/assets/69720515/f4ad0aaa-117e-4871-9e82-64cd1b7d2b5c)
 
-![image](https://github.com/soumwadeep/Perfector/assets/69720515/452dca09-d6c3-4cf3-a13c-9d94ce7f39c1)
+# Contact Page
+![image](https://github.com/soumwadeep/Perfector/assets/69720515/5905e4c2-11ba-43d1-9860-7b3e65426d10)
 
-![image](https://github.com/soumwadeep/Perfector/assets/69720515/c01ff4b8-3896-4ac1-b11b-70458f383977)
+# Sign Up Page
+![image](https://github.com/soumwadeep/Perfector/assets/69720515/8ab682fa-d548-451c-8dc0-28a996c2f8be)
+
+# Sign In Page
+![image](https://github.com/soumwadeep/Perfector/assets/69720515/dd851e2c-d4ee-41f9-af82-54ed44e234aa)
+
+# Dashboard Page
+![image](https://github.com/soumwadeep/Perfector/assets/69720515/8958a92f-5bd8-46a1-88a4-4e461f302fbf)
+
+# Todo Page
+![image](https://github.com/soumwadeep/Perfector/assets/69720515/8d609433-1aa7-4db8-8416-4ba346c51481)
+
+# Profile Page
+![image](https://github.com/soumwadeep/Perfector/assets/69720515/d53e04ba-c540-485c-be1d-30efa744f509)
 
 
 ## Test Login Details
