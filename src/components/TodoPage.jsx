@@ -11,8 +11,15 @@ const TodoPage = () => {
   const { topicId } = useParams();
   const [todo, setTodo] = useState("");
   const docId = Date.now().toString();
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (todo === "") {
+      alert("Write Something In Your Todo!");
+      console.log("Todo item is empty. Not adding.");
+      return;
+    }
+
     const promise = databases.createDocument(
       "64a655223c7d1fc593e5",
       "64a75d003e72250d0967",
@@ -36,6 +43,7 @@ const TodoPage = () => {
     );
     e.target.reset();
   };
+
   return (
     <section>
       <Sidebar />
